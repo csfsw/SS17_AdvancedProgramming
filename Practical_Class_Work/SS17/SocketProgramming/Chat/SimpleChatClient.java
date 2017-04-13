@@ -21,7 +21,9 @@ public class SimpleChatClient{
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
             scan = new Scanner(System.in);
+            new ServerReader(in);
             while(true){
+                synchronized(in){
                     String line = in.readLine();
                     if(line == null) return;
                     if(line.startsWith("SUBMITUSERNAME")){
@@ -37,17 +39,15 @@ public class SimpleChatClient{
                         out.println(userName);
                     }
                     if(line.startsWith("USERNAMEACCEPTED")){
-                        System.out.print("Enter a message : ");
-                        String message = scan.nextLine();
-                        System.out.println("");
-                        out.println(message);
+                        System.out.println("User Name accepted");
+                        break;
                     }
-                    if(line.startsWith("MESSAGE")){
-                        System.out.print(line);
-                        String message = scan.nextLine();
-                        System.out.println("");
-                        out.println(message);
-                    }
+                }
+                    
+            }
+            while(true){
+                String message = scan.nextLine();
+                out.println(message);
             }
         }catch(IOException ex){
             System.out.println(ex);
@@ -61,5 +61,30 @@ public class SimpleChatClient{
 
         SimpleChatClient client = new SimpleChatClient(args[0]);
         client.run();
+    }
+    private class ServerReader extends Thread{
+        private BufferedReader in;
+        public ServerReader(BufferedReader in){
+            this.in = in;
+            start();
+        }
+        public void run(){
+             try{
+                  System.out.println("Client Server Message thread started");
+                while(true){
+                   
+                    synchronized (in){
+                        String message = in.readLine();
+                        if(message ==null) return;
+                        if(message.startsWith("MESSAGE")){
+                            System.out.println(message.substring(8));
+                            }
+                    }
+                    
+                }
+            }catch (IOException ex){
+                            System.out.println(ex);
+            }
+        }
     }
 }
