@@ -62,6 +62,7 @@ public class SimpleChatClient{
         SimpleChatClient client = new SimpleChatClient(args[0]);
         client.run();
     }
+    
     private class ServerReader extends Thread{
         private BufferedReader in;
         public ServerReader(BufferedReader in){
