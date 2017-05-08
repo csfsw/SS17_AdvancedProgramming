@@ -1,0 +1,43 @@
+
+
+
+
+Project: Student Exam System
+
+
+  Requirements Analysis:-
+
+      Introduction:-
+
+  	  While taking exams in an university or school, administrator have to calculate student's marks, store it and process it until a student graduates from university. it's a hard task to store exam's record in paper-based system. In the university, administrator is responsible for handling all exams information such as all subjects teachers, students     failure and success and students obtained marks until a student graduates and adminstrator provides his information in a transcript. 
+
+  Purpose:-
+	
+	The main purpose of this project is to store all information and records of exams in a school. some of our projects goals are below:
+
+  - Store all information and records of exams in school.
+  - store record and information of teachers.
+  - store record and information of students.
+  - collect students marks.
+  - Store subjects exam date and taken by whom and teacher's associate.
+
+ 
+  Implementation requirements:-
+
+     Java:-
+  
+        Java is a  general-purpose programming language first released by Sun Microsystems in 1995. Java is fast, secure, and reliable. Java applications are typically compiled to bytecode that can run on any Java    virtual machine (JVM)      regardless of computer architecture. our project is fully developed in java.
+
+  MySql:-
+
+      In order to store and retrieve information, we need a database and   DBMS to store and retrieve data and also to do operations on it. we have   selected MySql DBMS for our project. MySql is open-source relational database management system that runs as a server providing multi-user access to a number of databases.
+MySQL was designed for three principles, which are performance, reliability and usability. A cheap, fast and efficient RDBMS was created by following those principles. MySQL becomes a perfect tool for developers and administrators to establish maintain and configure complex applications.
+
+     Swing:-
+ 
+       	Swing is a GUI widget toolkit for java. it is part of Oracle's java foundation classes- an API for providing a graphical user interface (GUI) for java programs. in this project we will use swing library to provide graphical interface. 
+ 
+  Operating system:-
+
+	 as we know that java is platform independent and run on every device that runs JVM (java virtual machine), but our main purpose is to develop a project that runs on windows operating systems.
+
