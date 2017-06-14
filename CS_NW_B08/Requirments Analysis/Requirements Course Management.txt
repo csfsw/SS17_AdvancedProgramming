@@ -1,0 +1,36 @@
+
+		Requirements for course management project:
+
+			
+		Following entities are required in a course management system:
+		1: manager
+		2: student
+		3: teacher
+		4: subject
+		5: Class
+		6: Time table
+		7: score
+		8: fee payment
+		 manager identification should have the following details
+		 username,password
+		Next we should register students that are studying in the course and for registering them we should 
+		store following details about them.
+		Each student must have a unique Id,firstname,lastname,address,email,phone and gender.
+		
+		after that teacher must be stored in our system and must have the following details.
+		Each teacher must have a nuique Id for identification and firstname,lastname,email,phone and salary.
+		
+		Next we should have a list of our subjects and classes that we are teaching in our course and we should 
+		store it in our system database.
+
+		other important entity that we should have it in our course is a time table.
+		Time table consists of subjects and classes with their teaching time and course start date.
+		
+		Next entity in course management is exam that we sould store the scores of student that they take in monthly 
+		exams and their results because we should then inform them about their result if they are passed or failed.
+
+		and the last thing that we should store in our system is fee payment.
+		and in this section  we must store name of subject,list of students,course start date and end date and finally amount
+		of fee that students must pay that monthly.
+		
+		
